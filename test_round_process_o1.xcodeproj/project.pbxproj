@@ -16,6 +16,9 @@
 		6E24E75D1D48D4D400E31746 /* test_round_process_o1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E24E75C1D48D4D400E31746 /* test_round_process_o1Tests.m */; };
 		6E24E7681D48D4D400E31746 /* test_round_process_o1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E24E7671D48D4D400E31746 /* test_round_process_o1UITests.m */; };
 		6E24E7791D49E03C00E31746 /* UICircleProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E24E7781D49E03C00E31746 /* UICircleProcessView.m */; };
+		6E24E77F1D49FA2100E31746 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6E24E77B1D49FA2100E31746 /* LICENSE */; };
+		6E24E7801D49FA2100E31746 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E24E77D1D49FA2100E31746 /* MBProgressHUD.m */; };
+		6E24E7811D49FA2100E31746 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 6E24E77E1D49FA2100E31746 /* README.mdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,10 @@
 		6E24E7691D48D4D400E31746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E24E7771D49E03C00E31746 /* UICircleProcessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICircleProcessView.h; sourceTree = "<group>"; };
 		6E24E7781D49E03C00E31746 /* UICircleProcessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICircleProcessView.m; sourceTree = "<group>"; };
+		6E24E77B1D49FA2100E31746 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6E24E77C1D49FA2100E31746 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6E24E77D1D49FA2100E31746 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6E24E77E1D49FA2100E31746 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +117,7 @@
 				6E24E7491D48D4D400E31746 /* ViewController.m */,
 				6E24E7771D49E03C00E31746 /* UICircleProcessView.h */,
 				6E24E7781D49E03C00E31746 /* UICircleProcessView.m */,
+				6E24E77A1D49FA2100E31746 /* MBProgressHUD */,
 				6E24E74B1D48D4D400E31746 /* Main.storyboard */,
 				6E24E74E1D48D4D400E31746 /* Assets.xcassets */,
 				6E24E7501D48D4D400E31746 /* LaunchScreen.storyboard */,
@@ -143,6 +151,17 @@
 				6E24E7691D48D4D400E31746 /* Info.plist */,
 			);
 			path = test_round_process_o1UITests;
+			sourceTree = "<group>";
+		};
+		6E24E77A1D49FA2100E31746 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6E24E77B1D49FA2100E31746 /* LICENSE */,
+				6E24E77C1D49FA2100E31746 /* MBProgressHUD.h */,
+				6E24E77D1D49FA2100E31746 /* MBProgressHUD.m */,
+				6E24E77E1D49FA2100E31746 /* README.mdown */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +269,7 @@
 			files = (
 				6E24E7521D48D4D400E31746 /* LaunchScreen.storyboard in Resources */,
 				6E24E74F1D48D4D400E31746 /* Assets.xcassets in Resources */,
+				6E24E77F1D49FA2100E31746 /* LICENSE in Resources */,
 				6E24E74D1D48D4D400E31746 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +297,8 @@
 			files = (
 				6E24E74A1D48D4D400E31746 /* ViewController.m in Sources */,
 				6E24E7471D48D4D400E31746 /* AppDelegate.m in Sources */,
+				6E24E7801D49FA2100E31746 /* MBProgressHUD.m in Sources */,
+				6E24E7811D49FA2100E31746 /* README.mdown in Sources */,
 				6E24E7791D49E03C00E31746 /* UICircleProcessView.m in Sources */,
 				6E24E7441D48D4D400E31746 /* main.m in Sources */,
 			);
@@ -504,6 +526,7 @@
 				6E24E76E1D48D4D400E31746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E24E76F1D48D4D400E31746 /* Build configuration list for PBXNativeTarget "test_round_process_o1Tests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +535,7 @@
 				6E24E7711D48D4D400E31746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E24E7721D48D4D400E31746 /* Build configuration list for PBXNativeTarget "test_round_process_o1UITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +544,7 @@
 				6E24E7741D48D4D400E31746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
