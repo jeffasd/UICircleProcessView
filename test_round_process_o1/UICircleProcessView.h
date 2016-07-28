@@ -10,6 +10,8 @@
 
 @interface UICircleProcessView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame ProcessColor:(UIColor *)processColor;
+
 @property(nonatomic, copy) NSString *processStr;
 
 @end

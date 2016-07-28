@@ -11,7 +11,7 @@
 #define kViewWidth      self.frame.size.width
 #define kViewHeight     kViewWidth
 
-#define kLineWidth      (8.0)
+#define kLineWidth      (6.0)
 
 
 
@@ -23,14 +23,17 @@
 
 @property (nonatomic, weak) UILabel *processLabel;
 
+@property(nonatomic, strong) UIColor *processColor;
+
 @end
 
 @implementation UICircleProcessView
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame ProcessColor:(UIColor *)processColor{
     
     self = [super initWithFrame:frame];
     if (self) {
+        self.processColor = processColor;
         [self initBackgroundView];
         [self initUI];
         [self initAnimation];
@@ -50,9 +53,10 @@
     
     UILabel *label = [UILabel new];
     label.frame = self.bounds;
-    label.font = [UIFont systemFontOfSize:16];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:18];
     label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"百分比";
+//    label.text = @"百分比";
     [self addSubview:label];
     self.processLabel = label;
 }
@@ -81,12 +85,16 @@
     
     CALayer *converLayer = [CALayer layer];
     
+    if (_processColor == nil) {
+        _processColor = [UIColor redColor];
+    }
+    
     CAGradientLayer *rightGradLayer = [CAGradientLayer layer];
     rightGradLayer.frame = CGRectMake(kViewWidth/2, 0, kViewWidth/2, kViewWidth*2);
     rightGradLayer.locations = @[@0, @1];
     id rightcolor1 = (__bridge id)[UIColor clearColor].CGColor;
-    id rightcolor2 = (__bridge id)[UIColor redColor].CGColor;
-    id rightcolorCenter = (__bridge id)[UIColor colorWithRed:1 green:0 blue:0 alpha:0.5].CGColor;
+    id rightcolor2 = (__bridge id)_processColor.CGColor;
+    id rightcolorCenter = (__bridge id)[_processColor colorWithAlphaComponent:0.5].CGColor;
     rightGradLayer.startPoint = CGPointMake(0, 0);
     rightGradLayer.endPoint = CGPointMake(0, 1);
     rightGradLayer.colors = @[rightcolor1, rightcolorCenter, rightcolor2];
@@ -99,7 +107,7 @@
     CAGradientLayer *leftGradLayer = [CAGradientLayer layer];
     leftGradLayer.frame = CGRectMake(0, 0, kViewWidth/2, kViewWidth*2);
     leftGradLayer.locations = @[@0, @1];
-    id leftcolor1 = (__bridge id)[UIColor redColor].CGColor;
+    id leftcolor1 = (__bridge id)_processColor.CGColor;
     id leftcolor2 = (__bridge id)[UIColor clearColor].CGColor;
     leftGradLayer.startPoint = CGPointMake(0, 0);
     leftGradLayer.endPoint = CGPointMake(0, 1);
