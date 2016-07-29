@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) CAShapeLayer *shapeLayerl;
 
+@property (nonatomic, weak) UIImageView *imageView;
+
 @end
 
 @implementation ViewController
@@ -83,6 +85,7 @@
     
 }
 
+//通过UIImage 来生成图片
 - (UIImage *)createImage{
     
     CGSize size = CGSizeMake(200, 200);
@@ -137,6 +140,11 @@
     
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
 #endif
+    
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:newImage];
+    [self.view addSubview:imageView];
+    self.imageView = imageView;
     
     return image;
     
