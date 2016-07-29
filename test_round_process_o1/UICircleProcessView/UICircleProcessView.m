@@ -11,9 +11,7 @@
 #define kViewWidth      self.frame.size.width
 #define kViewHeight     kViewWidth
 
-#define kLineWidth      (6.0)
-
-
+#define kLineWidth      (3.0)
 
 @interface UICircleProcessView ()
 
